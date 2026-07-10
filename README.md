@@ -23,6 +23,8 @@ To help you integrate and understand Thakol, this documentation is organized int
      - **Node.js (Express)**
      - **Python (FastAPI)**
      - **Go**
+4. 🤖 [**AI Agent Integration**](./ai-agents.md)
+   - Drop-in agents/skills that let your AI coding assistant (Claude, GitHub Copilot, Codex, Cursor, Windsurf, Gemini) add Thakol authentication for you. Source: [thakol-ai-agents](https://github.com/thakol/thakol-ai-agents).
 
 ---
 
