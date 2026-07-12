@@ -30,8 +30,14 @@ To help you integrate and understand Thakol, this documentation is organized int
 
 ## ⚡ Core Philosophy
 
-Traditional authentication SaaS platforms charge based on **Monthly Active Users (MAUs)**. This pricing structure penalizes products that scale. Thakol introduces a unique **Pay-As-You-Go Credit Model**:
+Traditional authentication SaaS platforms charge per **Monthly Active User (MAU)** — a model that penalizes products as they grow. Thakol bills by **tokens** instead: **1 token = 1 successful login or registration**, so you only ever count real authentications.
 
-* **No Monthly Subscriptions**: Register for free and get **5,000 logins** (50 tokens) included.
-* **Refill as Needed**: Top up your balance when you need more logins. 1 token = 100 successful logins.
-* **Non-expiring Credits**: Paid credits never expire, meaning you only pay for actual logins.
+During launch, Thakol is **free**:
+
+* **1,000,000 tokens** included with every workspace — no credit card required.
+* **Free top-ups**: refill another 1,000,000 tokens whenever you run low.
+* **Transparent usage**: track your token balance and consumption live in the dashboard.
+
+---
+
+> These docs are also published, rendered, at [**thakol.io/docs**](https://thakol.io/docs).

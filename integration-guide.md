@@ -1,6 +1,24 @@
 # OIDC Integration Guide
 
-To integrate Thakol.io authentication into your applications, you can use any standard OpenID Connect (OIDC) client library. Below are detailed integration examples for various popular frameworks and languages.
+To integrate Thakol.io authentication into your applications, you can use any standard OpenID Connect (OIDC) client library. Below are integration examples for popular frameworks and languages.
+
+Want a working starting point instead of snippets? Clone [**thakol-samples**](https://github.com/thakol/thakol-samples) — runnable apps for all seven stacks below.
+
+---
+
+## Before you start
+
+From your Thakol dashboard, grab these values for the app you're integrating:
+
+- **Issuer / Authority** — `https://auth.thakol.io/realms/YOUR_REALM`
+- **Client ID** — the OIDC client you register for the app
+- **Client Secret** — confidential (server-side) clients only; never expose it in a browser
+- **Redirect URI** — must exactly match a value registered on the client
+
+Everything else is discoverable at `<issuer>/.well-known/openid-configuration`, so most libraries only need the issuer.
+
+- **SPAs & mobile** (Vanilla JS, React, Angular) use Authorization Code + PKCE with a **public** client — no secret. Set **Web Origins** to your exact origin (no trailing slash).
+- **Backends** (Next.js, Express, FastAPI, Go) use a **confidential** client and validate incoming JWTs against `jwks_uri`, checking the `iss`, `aud`, and `exp` claims.
 
 ---
 
@@ -309,7 +327,7 @@ app.listen(3000);
 
 ---
 
-## 🐍 6. Python (FastAPI & Flask)
+## 🐍 6. Python (FastAPI)
 
 Secure your Python backends using standard OIDC middleware integrations via `authlib`.
 

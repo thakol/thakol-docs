@@ -49,8 +49,8 @@ Here is how Thakol compares to other solutions:
 | Feature / Dimension | Thakol.io | Clerk | Vanilla Keycloak |
 | :--- | :--- | :--- | :--- |
 | **Base Core** | Battle-tested Keycloak Core | Proprietary Closed-source | Open-source (self-hosted) |
-| **Pricing** | **Pay-As-You-Go** ($0.10 / 100 logins) | Expensive MAU Tiers | Free (high hosting & admin costs) |
+| **Pricing** | **Token-based** — free during launch (1 token / login) | Expensive MAU Tiers | Free (high hosting & admin costs) |
 | **Vendor Lock-in** | **None** (Uses standard OIDC) | **High** (Proprietary SDKs) | **None** (Uses standard OIDC) |
 | **JIT Migrator** | **Included** (Simple Dashboard sync) | Limited / Manual imports | Requires compiling custom Java SPI |
 | **Theme Editor** | **Live preview** & dynamic overlays | Paid Addons / Watermarks | Requires writing raw HTML files |
-| **Ops Overhead** | **Zero** (Serverless hosting) | Zero (SaaS hosting) | **High** (JVM tuning, DB ops, SSL certs) |
+| **Ops Overhead** | **Zero** (Fully managed hosting) | Zero (SaaS hosting) | **High** (JVM tuning, DB ops, SSL certs) |
