@@ -50,5 +50,16 @@ Meet modern security compliance audits (such as SOC2 or ISO 27001) effortlessly:
 ## 💻 5. Active Session Control
 
 Halt session hijacking attacks by checking and controlling active logins:
-* **Concurrent Logins**: Limit the number of concurrent active sessions allowed per user.
-* **Remote Revocation**: Developers and administrators can review active user sessions, check geographic locations, and trigger instant session sign-outs remotely.
+* **Concurrent Logins**: Limit the number of concurrent active sessions allowed per user, and choose whether an over-limit login is denied or replaces that user's oldest session. Disabled by default — enable it per workspace under Login Policies.
+* **Session Review**: Inspect every active session for a user from the Users directory: originating IP address, when the session started, when it was last used, and which of your applications it covers.
+* **Remote Revocation**: Sign a single session out, or sign a user out everywhere at once. Revocation takes effect immediately across every application in the workspace and is written to the audit trail.
+
+---
+
+## 📦 6. Your Data, On Demand
+
+Thakol is built on standard OIDC precisely so you are never trapped. That principle extends to your data:
+
+* **Full Workspace Export**: Download everything Thakol holds for your workspace as a single JSON file — configuration, OIDC applications, identity providers, administrators, your complete end-user directory, usage transactions and audit history. Available to the workspace owner from **Settings → Advanced**.
+* **Secrets Excluded By Design**: Exports never contain client secrets, captcha keys or migration credentials. An export is safe to hand to an auditor; rotate secrets from their own screens instead.
+* **Permanent User Deletion**: Remove an end user outright, not merely disable them — the Keycloak account and the email-delivery records Thakol holds for that address are both erased. This is what lets you answer a GDPR erasure request as the data controller. Every deletion is audited, and the audit record deliberately stores no email address.
