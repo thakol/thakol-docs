@@ -39,11 +39,14 @@ Guard your user database against robotic credential-stuffing and password-guessi
 
 ---
 
-## 🔑 4. Multi-Factor Auth (MFA) & WebAuthn
+## 🔑 4. Multi-Factor Authentication (MFA)
 
-Meet modern security compliance audits (such as SOC2 or ISO 27001) effortlessly:
-* **OTP Tokens**: Force or allow users to configure time-based one-time password (TOTP) credentials via Google Authenticator or Microsoft Authenticator.
-* **WebAuthn Support**: Allow hardware keys (such as YubiKeys) or biometric checks (like TouchID, FaceID, or Windows Hello) to authenticate sessions cryptographically.
+Add a second factor across every application in your workspace without touching your own code:
+* **OTP Tokens**: Require or offer time-based one-time passwords (TOTP), compatible with Google Authenticator, Microsoft Authenticator, 1Password, Authy, and any other RFC 6238 app.
+* **Workspace-wide**: Thakol sets the OTP step on your realm's browser login flow, so it applies to all of your OIDC clients at once. Your integration and OIDC flow are unchanged.
+* **Enforced or optional**: Require enrolment for every user on next sign-in, or let users enrol themselves and challenge only those who have.
+
+> **Passkeys / WebAuthn are not available yet.** Hardware keys and biometric sign-in were withdrawn from the initial release and are being rebuilt — see the [roadmap](https://thakol.io/roadmap). Earlier versions of this page listed them as available; that was incorrect. TOTP is the supported second factor today.
 
 ---
 
@@ -60,6 +63,6 @@ Halt session hijacking attacks by checking and controlling active logins:
 
 Thakol is built on standard OIDC precisely so you are never trapped. That principle extends to your data:
 
-* **Full Workspace Export**: Download everything Thakol holds for your workspace as a single JSON file — configuration, OIDC applications, identity providers, administrators, your complete end-user directory, usage transactions and audit history. Available to the workspace owner from **Settings → Advanced**.
+* **Full Workspace Export**: Download everything Thakol holds for your workspace as a single JSON file — configuration, OIDC applications, identity providers, administrators, your end-user directory, usage transactions and audit history. Available to the workspace owner from **Settings → Advanced**.
 * **Secrets Excluded By Design**: Exports never contain client secrets, captcha keys or migration credentials. An export is safe to hand to an auditor; rotate secrets from their own screens instead.
 * **Permanent User Deletion**: Remove an end user outright, not merely disable them — the Keycloak account and the email-delivery records Thakol holds for that address are both erased. This is what lets you answer a GDPR erasure request as the data controller. Every deletion is audited, and the audit record deliberately stores no email address.
