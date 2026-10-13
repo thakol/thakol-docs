@@ -41,8 +41,8 @@ Guard your user database against robotic credential-stuffing and password-guessi
 
 ## Passwordless Email OTP
 
-Email OTP is implemented and tested; rollout to the live service is pending. After deployment,
-workspace owners can enable **Email code (passwordless)** under
+Email OTP is available as an opt-in passwordless method for application users.
+Workspace owners can enable **Email code (passwordless)** under
 **Dashboard → Settings → Advanced → Sign-In Methods**.
 
 * **No password needed**: application users receive a six-digit email code and enter it in the browser where they requested it.

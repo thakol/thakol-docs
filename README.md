@@ -27,7 +27,7 @@ To help you integrate and understand Thakol, this documentation is organized int
    - Drop-in agents/skills that let your AI coding assistant (Claude, GitHub Copilot, Codex, Cursor, Windsurf, Gemini) add Thakol authentication for you. Source: [thakol-ai-agents](https://github.com/thakol/thakol-ai-agents).
 
 5. ✉️ [**Passwordless Email OTP**](./email-otp.md)
-   - Enable email-code sign-in and optional signup after email verification. Implemented and tested; live rollout is pending.
+   - Enable email-code sign-in and optional signup after email verification. Enabled per workspace by its owner.
 
 ---
 

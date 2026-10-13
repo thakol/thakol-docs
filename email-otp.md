@@ -3,13 +3,12 @@
 Application users enter their email address, receive a six-digit code, and enter it to sign in
 without a password. Your application keeps its existing OIDC authorization flow and callback.
 
-**Rollout pending:** the feature is implemented and tested, but it is not yet enabled on the live
-service. The platform update must be deployed before workspace owners can enable it.
+**Opt-in per workspace:** a workspace owner enables email OTP after confirming that
+authentication email delivery is configured.
 
 ## Enable for existing users
 
-An active workspace's **OWNER** can enable this method after the platform update and email
-delivery configuration are in place:
+An active workspace's **OWNER** can enable this method after email delivery is configured:
 
 1. Open **Dashboard → Settings → Advanced → Sign-In Methods**.
 2. Enable **Email code (passwordless)**.
