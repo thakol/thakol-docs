@@ -39,6 +39,23 @@ Guard your user database against robotic credential-stuffing and password-guessi
 
 ---
 
+## Passwordless Email OTP
+
+Email OTP is implemented and tested; rollout to the live service is pending. After deployment,
+workspace owners can enable **Email code (passwordless)** under
+**Dashboard → Settings → Advanced → Sign-In Methods**.
+
+* **No password needed**: application users receive a six-digit email code and enter it in the browser where they requested it.
+* **Optional signup**: with application self-registration and **Create new application users after email verification** enabled, Thakol creates the account only after email verification.
+* **Bounded codes**: five-minute expiry, single use, five verification attempts, and send/resend limits. Resending invalidates the previous code.
+* **Existing OIDC integration**: the app uses its usual authorization flow and callback.
+* **Password fallback and MFA**: password login remains available, and any required authenticator-app MFA still follows email verification.
+
+This option is for application users, not Thakol workspace approval or platform administrators.
+See the [email OTP setup guide](./email-otp.md) for enablement, signup policy, and troubleshooting.
+
+---
+
 ## 🔑 4. Multi-Factor Authentication (MFA)
 
 Add a second factor across every application in your workspace without touching your own code:
