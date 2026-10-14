@@ -2,7 +2,7 @@
 
 Welcome to the public documentation repository for **Thakol.io**, a developer-focused authentication engine designed for modern web applications and APIs.
 
-Thakol provides the enterprise-grade identity features of **Keycloak** (like MFA, WebAuthn, SSO, and JIT password migrations) but abstracts away the deployment, scaling, configuration, and complex pricing, delivering a simple subscription-free experience.
+Thakol provides hosted **Keycloak** identity features (password, enrolled-user TOTP, OIDC providers, email OTP/links and JIT migration) but abstracts away the deployment, scaling, configuration, and complex pricing, delivering a simple subscription-free experience.
 
 ---
 
@@ -50,3 +50,7 @@ During launch, Thakol is **free**:
 Offer [single-use email links](./email-links.md) alongside [email OTP](./email-otp.md).
 Workspace owners enable each method separately; links finish in the original browser after
 explicit confirmation, with existing MFA and OIDC/PKCE checks preserved.
+
+## Validated capability status
+
+See [the current roadmap](./roadmap.md). Passkeys, SMS and guided SAML remain planned. Mandatory MFA for existing unenrolled application users is a known P0 gap being corrected.

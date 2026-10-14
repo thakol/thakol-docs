@@ -91,3 +91,7 @@ request a link and open it in the original browser/profile, then confirm sign-in
 after five minutes and are single-use; GET previews do not authenticate. Optional signup has
 its own permission and requires application self-registration. Password fallback and required
 MFA remain available. See [setup and behaviour](./email-links.md).
+
+## Mandatory MFA rollout limitation
+
+Enrolled authenticator-app users are challenged, but enforcement for existing unenrolled application users is being corrected. Confirm enrollment for each user before relying on a workspace-wide MFA requirement. See [current status](./roadmap.md).

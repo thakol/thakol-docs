@@ -58,3 +58,7 @@ To disable this method, turn off **Email code (passwordless)** and save. Users c
 a password need the allowed password-reset flow or email OTP restored to sign in again.
 
 The rendered guide is at [thakol.io/docs/email-otp](https://thakol.io/docs/email-otp) after deployment.
+
+## Mandatory MFA rollout limitation
+
+Enrolled authenticator-app users are challenged, but enforcement for existing unenrolled application users is being corrected. Confirm enrollment for each user before relying on a workspace-wide MFA requirement. See [current status](./roadmap.md).
