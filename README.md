@@ -53,4 +53,4 @@ explicit confirmation, with existing MFA and OIDC/PKCE checks preserved.
 
 ## Validated capability status
 
-See [the current roadmap](./roadmap.md). Passkeys, SMS and guided SAML remain planned. Mandatory MFA for existing unenrolled application users is a known P0 gap being corrected.
+See [the current roadmap](./roadmap.md). Passkeys, SMS and guided SAML remain planned. Required authenticator-app MFA covers existing and new application users; enabling or repairing the policy ends older application sessions once.

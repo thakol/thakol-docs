@@ -2,7 +2,7 @@
 
 ## Available
 
-Password fallback, enrolled-user TOTP, external OIDC providers, lazy password migration, OIDC
+Password fallback, optional/required authenticator-app TOTP, external OIDC providers, lazy password migration, OIDC
 client management, team/user administration, hosted branding, bot/lockout policies, data export,
 session review/revocation/concurrency controls, and free-launch usage counters.
 
@@ -12,14 +12,16 @@ are distinct from Thakol dashboard/platform accounts.
 
 ## Ordered work
 
-1. **Mandatory MFA:** existing unenrolled application users can complete primary login despite
-   require-every-user. Enrolled users are challenged. Fix enrollment and enclosing flow coverage,
-   then verify password, OTP and link paths before claiming universally enforced MFA.
-2. **Email visibility:** webhook/model exist; SES set/destination/topic exist, but a subscription
+Mandatory MFA now requires enrollment for existing and new users before the authorization code
+is issued on password, OTP and link paths. Enabling or repairing it ends older application SSO
+sessions once. The real Keycloak regression covers enrollment, valid/invalid TOTP, PKCE,
+older SSO reset and optional/disabled restoration; first-client acceptance remains separate.
+
+1. **Email visibility:** webhook/model exist; SES set/destination/topic exist, but a subscription
    and sending-identity configuration-set binding are missing. Implement scoped logs and prove delivery.
-3. **First-client acceptance:** real receipt/setup, passwordless inbox delivery, application
+2. **First-client acceptance:** real receipt/setup, passwordless inbox delivery, application
    callback, token verification, usage, recovery, logout and data export.
-4. **Reliable usage:** listener failures currently log without durable retry; free counters are
+3. **Reliable usage:** listener failures currently log without durable retry; free counters are
    not a paid-billing guarantee. Only successful LOGIN/REGISTER events count, not mail requests/previews.
 
 Owner/operator work: replace routine root AWS access, prove isolated restore, define retention

@@ -92,6 +92,6 @@ after five minutes and are single-use; GET previews do not authenticate. Optiona
 its own permission and requires application self-registration. Password fallback and required
 MFA remain available. See [setup and behaviour](./email-links.md).
 
-## Mandatory MFA rollout limitation
+## Mandatory authenticator-app MFA
 
-Enrolled authenticator-app users are challenged, but enforcement for existing unenrolled application users is being corrected. Confirm enrollment for each user before relying on a workspace-wide MFA requirement. See [current status](./roadmap.md).
+With **Require it for every user** enabled, existing and new application users must enroll before receiving an OIDC authorization code. Enrolled users enter their authenticator code after password, email OTP or email-link verification. Enabling or repairing the policy ends older application SSO sessions once. Optional MFA allows unenrolled users to sign in. Applications still enforce normal JWT expiration and revocation. Test both enrolled and unenrolled users. See [current status](./roadmap.md).
