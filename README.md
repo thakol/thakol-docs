@@ -44,3 +44,9 @@ During launch, Thakol is **free**:
 ---
 
 > These docs are also published, rendered, at [**thakol.io/docs**](https://thakol.io/docs).
+
+## Email login links
+
+Offer [single-use email links](./email-links.md) alongside [email OTP](./email-otp.md).
+Workspace owners enable each method separately; links finish in the original browser after
+explicit confirmation, with existing MFA and OIDC/PKCE checks preserved.
