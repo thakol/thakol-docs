@@ -53,3 +53,7 @@ Disable links while the provider is still deployed. Confirm OTP remains bound if
 both methods are off, native password login is restored. Never remove a provider referenced by
 an active flow. Accounts created without passwords need password-reset access or a passwordless
 method reenabled. Older dashboard callers that omit link settings preserve the current link policy.
+
+## Mandatory MFA rollout limitation
+
+Enrolled authenticator-app users are challenged, but enforcement for existing unenrolled application users is being corrected. Confirm enrollment for each user before relying on a workspace-wide MFA requirement. See [current status](./roadmap.md).
