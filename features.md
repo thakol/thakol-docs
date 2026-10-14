@@ -83,3 +83,11 @@ Thakol is built on standard OIDC precisely so you are never trapped. That princi
 * **Full Workspace Export**: Download everything Thakol holds for your workspace as a single JSON file — configuration, OIDC applications, identity providers, administrators, your end-user directory, usage transactions and audit history. Available to the workspace owner from **Settings → Advanced**.
 * **Secrets Excluded By Design**: Exports never contain client secrets, captcha keys or migration credentials. An export is safe to hand to an auditor; rotate secrets from their own screens instead.
 * **Permanent User Deletion**: Remove an end user outright, not merely disable them — the Keycloak account and the email-delivery records Thakol holds for that address are both erased. This is what lets you answer a GDPR erasure request as the data controller. Every deletion is audited, and the audit record deliberately stores no email address.
+
+## Passwordless email links
+
+Email login links are opt-in per application workspace, independently of email codes. Users
+request a link and open it in the original browser/profile, then confirm sign-in. Links expire
+after five minutes and are single-use; GET previews do not authenticate. Optional signup has
+its own permission and requires application self-registration. Password fallback and required
+MFA remain available. See [setup and behaviour](./email-links.md).
