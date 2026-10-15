@@ -8,6 +8,10 @@ Workspace owners open **Dashboard → Login & Bot Protection** and choose, for e
 
 Supported configuration types include Google, Facebook, GitHub, LinkedIn, Microsoft, Apple and generic OpenID Connect. Availability depends on installed provider factories and platform configuration. Apple requires an additional server provider installation in the current distribution.
 
+Thakol's hosted website and authentication endpoints are protected by Cloudflare at the network edge, including TLS termination and edge protection for public traffic. This layer remains active when **No CAPTCHA** is selected. Your own application's hosting and Cloudflare configuration are managed separately.
+
+CAPTCHA uses **Google reCAPTCHA v3**, which assesses requests in the background without a checkbox or image puzzle. Thakol checks the resulting score against the configured threshold. Cloudflare edge protection is separate from reCAPTCHA.
+
 CAPTCHA offers **No CAPTCHA**, **Use Thakol CAPTCHA keys**, or **Bring my own CAPTCHA keys**. Customer keys must be reCAPTCHA v3 keys for the authentication hostname. Platform mode uses the platform score and keys. Existing customer keys are retained when switching to defaults. New realms inherit configured defaults; an operator can synchronize defaults to existing realms without replacing explicit overrides or disabled choices.
 
 Applications keep their customer realm issuer and normal OIDC integration. Do not copy social/CAPTCHA secrets into the application or use the shared broker realm as the application's issuer. Mandatory MFA also applies after social sign-in. A provider hint can select a login button but does not restrict which providers a client can use.
