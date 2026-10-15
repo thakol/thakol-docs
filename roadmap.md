@@ -4,7 +4,7 @@
 
 Password fallback, optional/required authenticator-app TOTP, external OIDC providers, lazy password migration, OIDC
 client management, team/user administration, hosted branding, bot/lockout policies, data export,
-session review/revocation/concurrency controls, and free-launch usage counters.
+session review/revocation/concurrency controls, scoped email delivery logs, and free-launch usage counters.
 
 Email OTP and original-browser email links are shipped and independently opt-in. Signup requires
 the selected method's explicit permission plus application self-registration; application users
@@ -17,11 +17,14 @@ is issued on password, OTP and link paths. Enabling or repairing it ends older a
 sessions once. The real Keycloak regression covers enrollment, valid/invalid TOTP, PKCE,
 older SSO reset and optional/disabled restoration; first-client acceptance remains separate.
 
-1. **Email visibility:** webhook/model exist; SES set/destination/topic exist, but a subscription
-   and sending-identity configuration-set binding are missing. Implement scoped logs and prove delivery.
-2. **First-client acceptance:** real receipt/setup, passwordless inbox delivery, application
+Email delivery logs are now deployed for workspaces and operators. SES subscriptions and the
+sending-identity configuration set are connected, and real Send/Delivery records were verified
+in both environments. Environment tags isolate attribution. Preproduction SMTP pairing was
+repaired. See [delivery visibility](./email-delivery.md).
+
+1. **First-client acceptance:** real receipt/setup, passwordless inbox delivery, application
    callback, token verification, usage, recovery, logout and data export.
-3. **Reliable usage:** listener failures currently log without durable retry; free counters are
+2. **Reliable usage:** listener failures currently log without durable retry; free counters are
    not a paid-billing guarantee. Only successful LOGIN/REGISTER events count, not mail requests/previews.
 
 Owner/operator work: replace routine root AWS access, prove isolated restore, define retention

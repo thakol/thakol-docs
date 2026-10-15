@@ -54,3 +54,8 @@ explicit confirmation, with existing MFA and OIDC/PKCE checks preserved.
 ## Validated capability status
 
 See [the current roadmap](./roadmap.md). Passkeys, SMS and guided SAML remain planned. Required authenticator-app MFA covers existing and new application users; enabling or repairing the policy ends older application sessions once.
+
+
+[Email delivery visibility](./email-delivery.md) is available in the workspace dashboard and
+operator console. Real SES delivery events are verified; application OTP/link callback
+acceptance remains a separate integration step.

@@ -57,3 +57,6 @@ method reenabled. Older dashboard callers that omit link settings preserve the c
 ## Mandatory authenticator-app MFA
 
 With **Require it for every user** enabled, existing and new application users must enroll before receiving an OIDC authorization code. Enrolled users enter their authenticator code after password, email OTP or email-link verification. Enabling or repairing the policy ends older application SSO sessions once. Optional MFA allows unenrolled users to sign in. Applications still enforce normal JWT expiration and revocation. Test both enrolled and unenrolled users. See [current status](./roadmap.md).
+
+
+For delivery troubleshooting, see [the scoped email delivery log](./email-delivery.md).
