@@ -1,66 +1,23 @@
-# Thakol.io — Public Documentation
+# Thakol documentation
 
-Welcome to the public documentation repository for **Thakol.io**, a developer-focused authentication engine designed for modern web applications and APIs.
+Add hosted sign-in and user management to your application with OpenID Connect (OIDC).
 
-Thakol provides hosted **Keycloak** identity features (password, enrolled-user TOTP, OIDC providers, email OTP/links and JIT migration) but abstracts away the deployment, scaling, configuration, and complex pricing, delivering a simple subscription-free experience.
+## Start here
 
----
+1. [Quick start](https://thakol.io/docs/quickstart): request a workspace, register your callback and connect your app.
+2. [Integration guide](./integration-guide.md): choose your language, or [use an AI assistant](./ai-agents.md).
+3. [Configure sign-in](./features.md): set branding, login methods and security policies.
 
-## 🧭 Navigation Guide
+## Login methods
 
-To help you integrate and understand Thakol, this documentation is organized into the following sections:
+- [Email codes](./email-otp.md) and [email links](./email-links.md): passwordless sign-in, enabled separately by the workspace owner.
+- [Social login and CAPTCHA](./managed-auth.md): use Thakol defaults, bring your own keys or disable a method. CAPTCHA uses invisible reCAPTCHA v3.
+- [Email delivery](./email-delivery.md): review delivery status and failures.
 
-1. 🚀 [**How It Works & OIDC Core**](./how-it-works.md)
-   - Read about Thakol's OIDC (OpenID Connect) architecture, workspace realms, client scopes, and security comparisons with proprietary SaaS solutions (like Clerk or Auth0).
-2. 🛡️ [**Platform Security & Features**](./features.md)
-   - Explore Thakol's core developer features: dynamic branding theme overlays, zero-downtime JIT (Just-In-Time) user migrations, Multi-Factor Authentication (MFA), active session tracking, and brute-force defenses.
-3. 🛠️ [**OIDC Integration Guide**](./integration-guide.md)
-   - Step-by-step code samples to implement OIDC login and JWT API gating in various languages/frameworks:
-     - **JavaScript (Vanilla)**
-     - **React.js**
-     - **Angular**
-     - **Next.js**
-     - **Node.js (Express)**
-     - **Python (FastAPI)**
-     - **Go**
-4. 🤖 [**AI Agent Integration**](./ai-agents.md)
-   - Drop-in agents/skills that let your AI coding assistant (Claude, GitHub Copilot, Codex, Cursor, Windsurf, Gemini) add Thakol authentication for you. Source: [thakol-ai-agents](https://github.com/thakol/thakol-ai-agents).
+## Reference
 
-5. ✉️ [**Passwordless Email OTP**](./email-otp.md)
-   - Enable email-code sign-in and optional signup after email verification. Enabled per workspace by its owner.
+[How OIDC works](./how-it-works.md) · [Current capabilities and roadmap](./roadmap.md) · [Security controls](https://thakol.io/security) · [Sample applications](https://github.com/thakol/thakol-samples)
 
----
+During launch, each workspace includes 1,000,000 tokens and free top-ups. One successful login or registration uses one token. No credit card is required. [Plan details](https://thakol.io/docs/billing).
 
-## ⚡ Core Philosophy
-
-Traditional authentication SaaS platforms charge per **Monthly Active User (MAU)** — a model that penalizes products as they grow. Thakol bills by **tokens** instead: **1 token = 1 successful login or registration**, so you only ever count real authentications.
-
-During launch, Thakol is **free**:
-
-* **1,000,000 tokens** included with every workspace — no credit card required.
-* **Free top-ups**: refill another 1,000,000 tokens whenever you run low.
-* **Transparent usage**: track your token balance and consumption live in the dashboard.
-
----
-
-> These docs are also published, rendered, at [**thakol.io/docs**](https://thakol.io/docs).
-
-## Email login links
-
-Offer [single-use email links](./email-links.md) alongside [email OTP](./email-otp.md).
-Workspace owners enable each method separately; links finish in the original browser after
-explicit confirmation, with existing MFA and OIDC/PKCE checks preserved.
-
-## Validated capability status
-
-See [the current roadmap](./roadmap.md). Passkeys, SMS and guided SAML remain planned. Required authenticator-app MFA covers existing and new application users; enabling or repairing the policy ends older application sessions once.
-
-
-[Email delivery visibility](./email-delivery.md) is available in the workspace dashboard and
-operator console. Real SES delivery events are verified; application OTP/link callback
-acceptance remains a separate integration step.
-
-## Managed social login and CAPTCHA
-
-Use Thakol defaults, bring your own provider/CAPTCHA keys, or explicitly disable a method.
-See [the configuration guide](./managed-auth.md) for availability, setup and identity scope.
+The [hosted documentation](https://thakol.io/docs) is the main setup guide. Existing detailed guides in this repository remain available for integration and operations.
