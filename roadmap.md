@@ -38,3 +38,8 @@ integration guides are available and do not imply an in-product AI onboarding en
 
 Guides: [OTP](https://thakol.io/docs/email-otp), [links](https://thakol.io/docs/email-links),
 [samples](https://github.com/thakol/thakol-samples), [AI agents](https://github.com/thakol/thakol-ai-agents).
+
+## Managed social login and CAPTCHA
+
+Use Thakol defaults, bring your own provider/CAPTCHA keys, or explicitly disable a method.
+See [the configuration guide](./managed-auth.md) for availability, setup and identity scope.

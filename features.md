@@ -95,3 +95,8 @@ MFA remain available. See [setup and behaviour](./email-links.md).
 ## Mandatory authenticator-app MFA
 
 With **Require it for every user** enabled, existing and new application users must enroll before receiving an OIDC authorization code. Enrolled users enter their authenticator code after password, email OTP or email-link verification. Enabling or repairing the policy ends older application SSO sessions once. Optional MFA allows unenrolled users to sign in. Applications still enforce normal JWT expiration and revocation. Test both enrolled and unenrolled users. See [current status](./roadmap.md).
+
+## Managed social login and CAPTCHA
+
+Use Thakol defaults, bring your own provider/CAPTCHA keys, or explicitly disable a method.
+See [the configuration guide](./managed-auth.md) for availability, setup and identity scope.

@@ -59,3 +59,8 @@ See [the current roadmap](./roadmap.md). Passkeys, SMS and guided SAML remain pl
 [Email delivery visibility](./email-delivery.md) is available in the workspace dashboard and
 operator console. Real SES delivery events are verified; application OTP/link callback
 acceptance remains a separate integration step.
+
+## Managed social login and CAPTCHA
+
+Use Thakol defaults, bring your own provider/CAPTCHA keys, or explicitly disable a method.
+See [the configuration guide](./managed-auth.md) for availability, setup and identity scope.
