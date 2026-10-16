@@ -14,6 +14,10 @@ Add hosted sign-in and user management to your application with OpenID Connect (
 - [Social login and CAPTCHA](./managed-auth.md): use Thakol defaults, bring your own keys or disable a method. CAPTCHA uses invisible reCAPTCHA v3.
 - [Email delivery](./email-delivery.md): review delivery status and failures.
 
+## Moving providers
+
+[Export users](./user-migration.md) as JSON or CSV. Owners and administrators can migrate profiles and assignments without exporting authentication secrets.
+
 ## Reference
 
 [How OIDC works](./how-it-works.md) · [Current capabilities and roadmap](./roadmap.md) · [Security controls](https://thakol.io/security) · [Sample applications](https://github.com/thakol/thakol-samples)
